@@ -1,3 +1,12 @@
+/* Improvements
+    https://github.com/skratchdot/random-useragent
+    https://www.npmjs.com/package/pending-xhr-puppeteer
+    https://www.npmjs.com/package/puppeteer-extra-plugin
+    https://www.npmjs.com/package/puppeteer-extra
+    https://www.npmjs.com/package/puppeteer-extra-plugin-stealth
+    https://www.npmjs.com/package/puppeteer-cluster
+    https://www.npmjs.com/package/puppeteer-extra-plugin-recaptcha
+*/
 const puppeteer = require('puppeteer');
 const download = require('image-downloader');
 /* (async () => {
@@ -16,7 +25,7 @@ const download = require('image-downloader');
 })();
  */
 /* (async() => {
-    try {   
+    try {
         // Mở trình duyệt mới và tới trang của kenh14
         const browser = await puppeteer.launch({ headless: false });
         const page = await browser.newPage();
@@ -43,8 +52,8 @@ const download = require('image-downloader');
 })(); */
 
 (async() => {
-     try {  
-        const browser = await puppeteer.launch();
+     try {
+        const browser = await puppeteer.launch({ headless: false });
         console.log('Browser openned');
         const page = await browser.newPage();
         const url = 'http://kenh14.vn/ai-roi-cung-khac-cac-hot-girl-nay-cung-khong-ngoai-le-khi-vong-1-cu-ngay-cang-phong-phao-20171207193958533.chn';
@@ -60,22 +69,21 @@ const download = require('image-downloader');
         console.log(typeof imgLinks);
 
         // Tải các ảnh này về thư mục hiện tại
-       /*  await Promise.all(imgLinks.map(imgUrl => download.image({
+        await Promise.all(imgLinks.map(imgUrl => download.image({
             url: imgUrl,
-            dest: __dirname
+            dest: `${__dirname}/images`
         }))).then(()=> {
             console.log("done");
-            
         })
         .catch((err)=> {
             throw err
-        }) */
+        })
 
         await browser.close();
 
      }
     catch(err) {
             throw err
-    } 
+    }
 
 })();
