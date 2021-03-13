@@ -1,4 +1,4 @@
-const data = require("./meomeo-23-39-16_06-12-2020.json");
+const data = require("./meomeo-18-03-31_13-03-2021.json");
 
 const sumUpNumberFrequency = (arrOfNums) => {
     let mapping = [];

@@ -1,4 +1,4 @@
-const data = require("./ketquavietlotto-23-29-20_06-12-2020.json");
+const data = require("./ketquavietlotto-18-02-13_13-03-2021.json");
 const moment = require("moment");
 const fs = require("fs");
 
@@ -39,9 +39,7 @@ const extractTarget = (targetArr, data) => {
 }
 
 let path = [
-    ["dsgiai", "giaiNhat"],
-    ["dsgiai", "giaiNhi"],
-    ["dsgiai", "giaiBa"]
+    ["dsgiai", "giaiNhat"]
 ];
 const split = (arrayOfString) => {
     return arrayOfString.map(str => str.split(""));

@@ -1,3 +1,13 @@
+
+
+
+
+////// ABANDONED!!!
+
+
+
+
+
 const data = require("./ketquavietlotto-01_04_11-02_10_2020.json");
 const fs = require("fs");
 
